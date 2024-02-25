@@ -1,0 +1,14 @@
+---
+
+const { url,class:classname} = Astro.props;
+---
+
+<a
+  class={`rounded-full flex justify-center items-center gap-2 px-4 py-2 transition hover:scale-110 ${classname}`}
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <slot />
+</a>
+

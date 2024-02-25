@@ -1,0 +1,33 @@
+---
+import ExperienciaItems from "./ExperienciaItems.astro"
+
+const Experiencia=[
+    {
+        fecha:"Enero 2020 a Marzo 2020",
+        titulo: "Desarrollador Junior Full en Área de Desarrolloro Fortune Project",
+        descripcion:"Desarrollaba modulos de parte de un proyecto encargado de embarcaciones de contenedores de costa del peru , donde usaba Mysql para la base de datos spring boot para el back-end y angular para el front-end  ",
+ 
+    },
+    {
+        fecha:"Agosto 2017 - Marzo 2018",
+        titulo: "Bolsista de Soporte Junior en Área de Soporte Técnico en la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.",
+        descripcion:"Era el responsable de un laboratorio de la Facultad de Ingeniería de Sistemas e Informática donde habian 20 maquinas y todas las maquinas debian estar en funcionamiento ya sea en software y hardware", 
+    },
+    {
+        fecha:"Enero 2017- Agosto 2017",
+        titulo: "Practicante de soporte en Área de Soporte Técnico en la Facultad de Ingeniería de Sistemas e Informática de la UNMSM",
+        descripcion:"Era encargado de brindar asistencia técnica y resolver problemas relacionados con el funcionamiento de software, hardware y redes en la Facultad de Ingeniería de Sistemas e Informática"
+    }
+]
+---
+
+<ol class="relative border-s ml-6 border-gray-200 dark:border-gray-700">
+    {
+        Experiencia.map(experiencia =>(
+        <li class="mb-10 ms-4">
+            <ExperienciaItems {... experiencia}/>
+        </li>
+        ))
+    }
+  
+</ol>

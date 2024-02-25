@@ -1,0 +1,16 @@
+---
+interface Props {
+    linkGit:string,
+    url:string,
+    name:string
+}
+const{linkGit,url,name} = Astro.props
+---
+<a href={linkGit}  target="_blank" rel="noopener noreferrer" class="bg-slate-700">
+    <img
+    class=" rounded-xl shadow-2xl shadow-white/20  hover:-translate-y-1 filter grayscale hover:grayscale-0"
+    src={url}
+    
+    alt={`captura de pantalla del proyecto  ${name}`}
+    /> 
+</a>

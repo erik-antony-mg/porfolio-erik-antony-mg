@@ -1,0 +1,75 @@
+---
+import Image from "./Image.astro";
+import {TAGS} from "../scripts/Tag.js"
+
+
+const Projects = [
+  {
+    titulo: "Desarrollo Rest-Api de Productos",
+    descripcion:
+      "Este proyecto contiene los cruds basicos con imagenes de cada producto guardadas en un archivo local y una documentacion en Swager con sus validaciones y con errores personalizados ",
+    github: "https://github.com/erik-antony-mg/api-rest-products",
+    image: "images/proyecto1.webp",
+    link: "",
+    tgs: [TAGS.MYSQL,TAGS.MAVEN, TAGS.SPRING, TAGS.SWAGGER, TAGS.GIT]
+  },
+  {
+    titulo: "Rest-Api de Usuarios y Roles",
+    descripcion:
+      "Este proyecto administra usuarios por roles donde cada endpoint permitia hacer algo dependiendo del rol y a su vez tienen sus validaciones y errores personalizados con su documentacion ",
+    github: "https://github.com/erik-antony-mg/spring-security-6.2",
+    image: "images/proyecto2.webp",
+    link: "",
+    tgs: [TAGS.MYSQL, TAGS.MAVEN, TAGS.SPRING, TAGS.JWT, TAGS.SWAGGER,TAGS.GIT]
+  },
+  
+  {
+    titulo: "Sistema de Gestión de Exámenes",
+    descripcion:
+      "Es una aplicación web que permite a administradores gestionar categorias, examenes y preguntas, y al estudiante tomar exámenes en un tiempo determinado y ver su resultado ",
+    github: "https://github.com/erik-antony-mg/portal_examenes_backend",
+    image: "images/proyecto-3.webp",
+    link: "",
+    tgs: [TAGS.MYSQL,TAGS.MAVEN, TAGS.SPRING, TAGS.ANGULAR, TAGS.JWT, TAGS.GIT]
+  },
+  {
+    titulo: "Aplicacion de listado y generado en PDF",
+    descripcion:
+      "Desarrollo de una aplicación web de listado de integrantes de una olla comun donde al generar en PDF los integrantes se muestra la lista y una lista de firmas.",
+    github: "https://github.com/erik-antony-mg/proyecto-spring-react-docker",
+    image: "images/proyecto4.webp",
+    link: "",
+    tgs: [TAGS.MYSQL,TAGS.MAVEN, TAGS.SPRING, TAGS.REACT, TAGS.TAILWIND , TAGS.DOCKER]
+  }
+];
+---
+
+<div class="grid lg:grid-cols-4 gap-4 mt-6">
+  {
+    Projects.map((proyecto) => (
+      <article class="bg-slate-700/70  col-span-2 mt-6 mb-10  rounded-2xl p-6  shadow-lg">
+        
+          <h3 class="text-2xl text-pretty font-semibold text-yellow-200 mb-2">
+            {proyecto.titulo}
+          </h3>
+          <p class="text-lg m-3 text-justify">{proyecto.descripcion}</p>
+          <ul class="grid grid-cols-3 gap-2 pb-5 ">
+            {proyecto.tgs.map((tg) => (
+              <li class="">
+                <span class="flex gap-x-2  ">
+                  <tg.icono class="size-7" /> {tg.nombre}
+                </span>
+              </li>
+            ))}
+          </ul>
+      
+        <Image
+          linkGit={proyecto.github}
+          url={proyecto.image}
+          name={proyecto.titulo}
+        />
+      </article>
+
+    ))
+  }
+</div>

@@ -1,0 +1,37 @@
+---
+import {TAGS} from "../scripts/Tag.js"
+
+const Tecnologias = [
+  {
+    titulo: "Front-End",
+    iconoes: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.TAILWIND,TAGS.TYPESCREIPT,TAGS.ANGULAR,TAGS.REACT,TAGS.FRAMEASTRO],
+  },
+  {
+    titulo: "Back-End",
+    iconoes: [TAGS.MYSQL,TAGS.POSTGRESQL,TAGS.MONGO,TAGS.JAVA, TAGS.SPRING, TAGS.JWT,TAGS.SWAGGER],
+  },
+  {
+    titulo: "Herramientas",
+    iconoes: [TAGS.GIT,TAGS.DOCKER,TAGS.INTELLIJIDEA,TAGS.VISUALSTUDIO,TAGS.POSTMAN,TAGS.GITHUB],
+  },
+];
+---
+
+{
+  Tecnologias.map((tecnologia) => (
+    <article class="rounded-2xl p-6 dark:from-dark-950 shadow-2xl">
+      <div class="">
+        <h3 class="text-xl text-center">{tecnologia.titulo}</h3>
+        <ul class="grid grid-cols-3 grid-rows-3 gap-2 mt-8 text-center md:text-left">
+          {tecnologia.iconoes.map((tag) => (
+            <li class="">
+              <span class="flex flex-col justify-center  items-center rounded-full">
+                <tag.icono class="size-12" /> {tag.nombre}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  ))
+}

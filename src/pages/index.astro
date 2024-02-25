@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+import Mail from "../icons/Mail.astro";
+import BotonesSocial from "../components/BotonesSocial.astro";
+import ExperienciaLaboral from "../components/ExperienciaLaboral.astro";
+import Section from "../components/Section.astro";
+import Work from "../icons/Work.astro";
+import Card from "../components/Card.astro";
+import Article from "../components/Article.astro";
+---
+
+<Layout
+  title="Portfolio de erik antony muñico - Desarrollador y Programador Web"
+  description="Porfolio creado para compartir toda experiencia obtenia "
+>
+  <main>
+    <Section class="pt-28 pb-20">
+      <img
+        class="rounded-full w-24 h-24 mb-5"
+        src="images/kaff.webp"
+        alt="foto de perfil"
+      />
+      <h1
+        class="text-white text-3xl md:text-5xl font-bold flex flex-row gap-x-1 md:gap-x-4 pb-4"
+      >
+        Hola soy erik
+        <a
+          href="https://pe.linkedin.com/in/erik-antony-mu%C3%B1ico-galvan-6a32b519a"
+          target="_blank"
+          class="flex items-center"
+        >
+          <Badge titulo="Disponible para trabajar" />
+        </a>
+      </h1>
+      <h2 class="text-xl md:text-2xl opacity-80 text-justify">
+        Soy una persona apasionada por la tecnología, siempre buscando aprender y mejorar mis habilidades de forma autodidacta. Me considero cooperativo y disfruto colaborar con otros para resolver problemas y alcanzar objetivos comunes. Mi pasión por la tecnología me impulsa a estar al tanto de las últimas tendencias y a encontrar soluciones innovadoras en cualquier proyecto en el que me involucre.
+      </h2>
+      <nav class="flex flex-col items-start md:flex-row gap-x-4 mt-8">
+        <BotonesSocial
+          url="https://pe.linkedin.com/in/erik-antony-mu%C3%B1ico-galvan-6a32b519a"
+        >
+          <LinkedIn class="size-8" />LinkedIn
+        </BotonesSocial>
+        <BotonesSocial url="https://github.com/erik-antony-mg">
+          <GitHub class="size-8" />GitHub
+        </BotonesSocial>
+        <BotonesSocial
+          url="https://mail.google.com/mail/?view=cm&fs=1&to=erik.antony.mg@gmail.com"
+        >
+          <Mail class="size-8" />erik.antony.mg@gmail.com
+        </BotonesSocial>
+      </nav>
+    </Section>
+    <Section class="py-20" id="experiencia">
+      <h2
+        class="text-2xl md:text-4xl font-semibold mb-8 flex gap-x-3 items-center"
+      >
+        <Work class="size-12" />
+        Experiencia Laboral
+      </h2>
+      <ExperienciaLaboral />
+    </Section>
+    <Section class="py-20" id="proyectos">
+      <h2
+        class="text-2xl md:text-4xl font-semibold mb-8 flex gap-x-3 items-center"
+      >
+        <Work class="size-12" />
+        Proyecto personales
+      </h2>
+      <Card />
+    </Section>
+    <Section
+      class="grid lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:place-content-center mb-40"
+    >
+      <article>
+        <h2
+          class="text-2xl md:text-4xl font-semibold mb-8 flex gap-x-3 items-center"
+        >
+          <Work class="size-12" />
+          Tecnologías
+        </h2>
+        <p>
+          En mi viaje por el <span class="text-yellow-200"
+            >mundo del desarrollo web</span
+          >, he cultivado experiencia y habilidades en una variedad de
+          tecnologías. <span class="text-blue-400">Mi stack tecnológico</span>
+          incluye:
+        </p>
+      </article>
+      <Article />
+    </Section>
+  </main>
+</Layout>
