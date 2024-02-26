@@ -7,7 +7,7 @@ const Projects = [
   {
     titulo: "Desarrollo Rest-Api de Productos",
     descripcion:
-      "Este proyecto contiene los cruds basicos con imagenes de cada producto guardadas en un archivo local y una documentacion en Swager con sus validaciones y con errores personalizados ",
+      "Este proyecto contiene un CRUD basico con imágenes de cada producto guardadas en un archivo local y una documentación en Swagger con sus validaciones y con errores personalizados",
     github: "https://github.com/erik-antony-mg/api-rest-products",
     image: "images/proyecto1.webp",
     link: "",
@@ -16,7 +16,7 @@ const Projects = [
   {
     titulo: "Rest-Api de Usuarios y Roles",
     descripcion:
-      "Este proyecto administra usuarios por roles donde cada endpoint permitia hacer algo dependiendo del rol y a su vez tienen sus validaciones y errores personalizados con su documentacion ",
+      "Este proyecto administra usuarios por roles donde cada endpoint permite hacer algo dependiendo del rol y a su vez tienen sus validaciones y errores personalizados con su documentación",
     github: "https://github.com/erik-antony-mg/spring-security-6.2",
     image: "images/proyecto2.webp",
     link: "",
@@ -26,7 +26,7 @@ const Projects = [
   {
     titulo: "Sistema de Gestión de Exámenes",
     descripcion:
-      "Es una aplicación web que permite a administradores gestionar categorias, examenes y preguntas, y al estudiante tomar exámenes en un tiempo determinado y ver su resultado ",
+      "Es una aplicación web que permite administrar gestionar categorías, exámenes y preguntas, y al estudiante tomar exámenes en un tiempo determinado, ver su resultado e imprimirlos",
     github: "https://github.com/erik-antony-mg/portal_examenes_backend",
     image: "images/proyecto-3.webp",
     link: "",
@@ -35,7 +35,7 @@ const Projects = [
   {
     titulo: "Aplicacion de listado y generado en PDF",
     descripcion:
-      "Desarrollo de una aplicación web de listado de integrantes de una olla comun donde al generar en PDF los integrantes se muestra la lista y una lista de firmas.",
+      "Desarrollo de una aplicación web de listado de integrantes de una olla común donde al generar en PDF los integrantes se muestra la lista y una lista de firmas",
     github: "https://github.com/erik-antony-mg/proyecto-spring-react-docker",
     image: "images/proyecto4.webp",
     link: "",
@@ -49,13 +49,13 @@ const Projects = [
     Projects.map((proyecto) => (
       <article class="bg-slate-700/70  col-span-2 mt-6 mb-10  rounded-2xl p-6  shadow-lg">
         
-          <h3 class="text-2xl text-pretty font-semibold text-yellow-200 mb-2">
+          <h3 class="text-xl m-2 sm:text-2xl/5  text-pretty font-semibold text-yellow-200 mb-2">
             {proyecto.titulo}
           </h3>
-          <p class="text-lg m-3 text-justify">{proyecto.descripcion}</p>
+          <p class="text-lg m-2 text-pretty">{proyecto.descripcion}</p>
           <ul class="grid grid-cols-3 gap-2 pb-5 ">
             {proyecto.tgs.map((tg) => (
-              <li class="">
+              <li>
                 <span class="flex gap-x-2  ">
                   <tg.icono class="size-7" /> {tg.nombre}
                 </span>

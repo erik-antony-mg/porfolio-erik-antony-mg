@@ -16,13 +16,31 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://portfolio-erik-antony-mg.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content={title}
+    />
+    <meta
+      property="og:description"
+      content={description}
+    />
+    <meta
+      property="og:image"
+      content="/icono.svg"
+    />
     <link rel="icon" type="image/svg+xml" href="/icono.svg" />
     <title>{title}</title>
   </head>
   <body>
     <Header />
     <slot />
-    <Footer/>
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -37,16 +55,20 @@ const { title, description } = Astro.props;
   body {
     display: flex;
     flex-direction: column;
-    background: radial-gradient(farthest-corner at 50% 10%, #212020 40%, rgb(10, 10, 10) 100%);
+    background: radial-gradient(
+      farthest-corner at 50% 10%,
+      #212020 40%,
+      rgb(10, 10, 10) 100%
+    );
     background-attachment: fixed;
     background-repeat: repeat;
     color: #fff;
     min-height: 100vh;
   }
-  
-  @media (prefers-reduced-motion : reduce ){
-    html{
-        scroll-behavior:auto ;
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
   }
 </style>
