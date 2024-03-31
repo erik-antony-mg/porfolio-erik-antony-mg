@@ -10,6 +10,7 @@ import Section from "../components/Section.astro";
 import Work from "../icons/Work.astro";
 import Card from "../components/Card.astro";
 import Article from "../components/Article.astro";
+import Document from "../icons/Document.astro";
 ---
 
 <Layout
@@ -38,7 +39,9 @@ import Article from "../components/Article.astro";
       <h2 class="text-xl opacity-80 text-pretty">
         Soy una persona apasionada por la tecnología, siempre buscando aprender y mejorar mis habilidades de forma autodidacta. Me considero cooperativo y disfruto colaborar con otros para resolver problemas y alcanzar objetivos comunes. Mi pasión por la tecnología me impulsa a estar al tanto de las últimas tendencias y a encontrar soluciones innovadoras en cualquier proyecto en el que me involucre.
       </h2>
-      <nav class="flex flex-col items-start md:flex-row gap-x-4 mt-8">
+      <!-- <nav class="flex flex-col items-start md:flex-row gap-x-4 mt-8"> -->
+      <nav class="flex flex-col items-start lg:flex-row gap-x-2 mt-8">
+
         <BotonesSocial
           url="https://pe.linkedin.com/in/erik-antony-mu%C3%B1ico-galvan-6a32b519a"
         >
@@ -52,6 +55,13 @@ import Article from "../components/Article.astro";
         >
           <Mail class="size-8" />erik.antony.mg@gmail.com
         </BotonesSocial>
+        <BotonesSocial
+        url="cv.pdf",
+        target="",
+        download="C.V.muñico galvan erik antony.pdf"
+      >
+        <Document class="size-8 text-red-500" />C.V
+      </BotonesSocial>
       </nav>
     </Section>
     <Section class="py-20" id="experiencia">
