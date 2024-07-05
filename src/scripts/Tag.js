@@ -21,7 +21,13 @@ import Css from "../icons/Css.astro";
 import PostGre from "../icons/PostGre.astro"
 import Swagger from "../icons/Swagger.astro"
 import Maven from "../icons/Maven.astro";
+import Junit5 from "../icons/Junit5.astro";
 const TAGS = {
+  JUNIT5:{
+    nombre: "JUnit5",
+    class: "",
+    icono: Junit5,
+  },
   MAVEN: {
     nombre: "Maven",
     class: "",
