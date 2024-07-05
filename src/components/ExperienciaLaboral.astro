@@ -1,33 +1,37 @@
 ---
-import ExperienciaItems from "./ExperienciaItems.astro"
+import ExperienciaItems from "./ExperienciaItems.astro";
 
-const Experiencia=[
-    {
-        fecha:"Enero 2020 a Marzo 2020",
-        titulo: "Desarrollador Junior Full Stack en Área de Desarrolloro Fortune Project",
-        descripcion:"Desarrollaba modulos de parte de un proyecto encargado de embarcaciones de contenedores de costa del peru , donde usaba Mysql para la base de datos spring boot para el back-end y angular para el front-end  ",
- 
-    },
-    {
-        fecha:"Agosto 2017 - Marzo 2018",
-        titulo: "Bolsista de Soporte Junior en Área de Soporte Técnico en la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.",
-        descripcion:"Era el responsable de un laboratorio de la Facultad de Ingeniería de Sistemas e Informática donde habian 20 maquinas y todas las maquinas debian estar en funcionamiento ya sea en software y hardware", 
-    },
-    {
-        fecha:"Enero 2017- Agosto 2017",
-        titulo: "Practicante de soporte en Área de Soporte Técnico en la Facultad de Ingeniería de Sistemas e Informática de la UNMSM",
-        descripcion:"Era encargado de brindar asistencia técnica y resolver problemas relacionados con el funcionamiento de software, hardware y redes en la Facultad de Ingeniería de Sistemas e Informática"
-    }
-]
+const Experiencia = [
+{
+    fecha: "Diciembre 2022 - Enero 2024",
+    titulo:
+      "Desarrollador Junior en Estudio Jurídico SIEMPRE LEGAL.",
+    descripcion:
+      "Encargado del mantenimiento de distintos módulos del ERP de la empresa, así como de la creación, modificación y consumo de APIs. Colaboré con el equipo frontend para integrar servicios backend, utilizando tecnologías como Java 11, Spring Boot, Angular, Angular Material, SQL Server, Docker, Git, Swagger, JUnit, Mockito y Jacoco.",
+  },
+  {
+    fecha: "Enero 2021 a Julio 2021",
+    titulo:
+      "Desarrollador Junior Full Stack en Área de Desarrolloro Fortune Project",
+    descripcion:
+      "Responsable del desarrollo de módulos para un proyecto de gestión de embarcaciones de contenedores en la costa del Perú, utilizando MySQL para la base de datos, Spring Boot para el back-end y Angular para el front-end. ",
+  },
+  {
+    fecha: "Enero 2019- Marzo 2020",
+    titulo:
+      "Practicante de soporte Junior en Área de Soporte Técnico en la Facultad de Ingeniería de Sistemas e Informática de la UNMSM ",
+    descripcion:
+      "Responsable brindar asistencia técnica y resolver problemas relacionados con el funcionamiento de software, hardware y redes en la Facultad de Ingeniería de Sistemas e Informática",
+  },
+];
 ---
 
 <ol class="relative border-s ml-6 border-gray-200 dark:border-gray-700">
-    {
-        Experiencia.map(experiencia =>(
-        <li class="mb-10 ms-4">
-            <ExperienciaItems {... experiencia}/>
-        </li>
-        ))
-    }
-  
+  {
+    Experiencia.map((experiencia) => (
+      <li class="mb-10 ms-4">
+        <ExperienciaItems {...experiencia} />
+      </li>
+    ))
+  }
 </ol>
